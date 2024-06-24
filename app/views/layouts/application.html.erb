@@ -7,9 +7,10 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
- 
+    <%# javascript_importmap_tags %>
+    <%= javascript_include_tag 'tailwind.3.4.4' %>
+    <%= javascript_include_tag 'tailwind.config' %>
+  </head> 
   <body>
     <%= yield %>
   </body>
