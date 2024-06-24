@@ -2,9 +2,6 @@ source 'https://rubygems.org'
 
 ruby '3.1.2'
 
-# Solargraph
-gem 'solargraph'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
 
@@ -56,6 +53,9 @@ group :development, :test do
 end
 
 group :development do
+  # Lsp `Solargraph`
+  gem 'solargraph'
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
@@ -64,9 +64,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-
   gem 'error_highlight', '>= 0.4.0', platforms: [:ruby]
 end
+
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
