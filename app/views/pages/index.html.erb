@@ -1,3 +1,6 @@
 <div>
   <h1>ROOT - PAGE</h1>
+  <% if @user %>
+    <%= @user.username %>
+  <% end %>
 </div>
