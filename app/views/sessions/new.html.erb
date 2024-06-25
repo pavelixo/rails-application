@@ -1,11 +1,66 @@
-<h1>Sign In</h1>
+<div class="flex items-center justify-center h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold flex justify-center">Sign In</h1>
+    <%= form_with(url: '/signin', local: true) do |form| %>
+      <div class="py-2">
+        <div class="mb-2">
+          <%= form.text_field :username, 
+              name: 'session[username]', 
+              placeholder: :username,
+              class:"
+              form-input 
+              w-full 
+              px-2
+              py-1.25
+              rounded-md 
+              shadow-sm 
+              border 
+              border-gray-300 
+              focus:outline-none 
+              focus:border-gray-800 
+              placeholder-gray-400"   
+          %>
+        </div>
 
-<%= form_with(url: '/signin', local: true) do |form| %>
-  <%= form.label :username %>
-  <%= form.text_field :username, name: 'session[username]' %>
-
-  <%= form.label :password %>
-  <%= form.password_field :password, name: 'session[password]' %>
-
-  <%= form.submit 'Log In' %>
-<% end %>
+        <div class="mb-2">
+          <%= form.password_field :password, 
+              name: 'session[password]', 
+              placeholder: :password,
+              class:"
+              form-input 
+              w-full 
+              px-2
+              py-1.25
+              rounded-md 
+              shadow-sm 
+              border 
+              border-gray-300 
+              focus:outline-none 
+              focus:border-gray-800 
+              placeholder-gray-400"  
+          %>
+        </div>
+        <div class="flex justify-center">
+          <%= form.submit 'Sign Up',
+              class:"
+              text-gray-900
+              hover:text-white
+              border
+              border-gray-800 
+              hover:bg-gray-900 
+              font-medium 
+              rounded-lg 
+              text-sm 
+              px-3 
+              py-1.5
+              text-center 
+              me-1 
+              mb-1" 
+          %>
+        </div>
+      </div>
+    <% end %>
+    <span class="text-xs mb-2 flex justify-center">or</span>
+    <%= link_to "Sign In", register_path, class: "text-xs mt-2 flex justify-center hover:underline" %>
+  </div>
+</div>

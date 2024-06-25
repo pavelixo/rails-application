@@ -1,105 +1,105 @@
 <div class="flex items-center justify-center h-screen">
   <div class="bg-white p-6 rounded-lg shadow-lg">
-  <h1 class="text-2xl font-bold flex justify-center">Sign Up</h1>
-  <%= form_with(model: @user, url: '/signup', local: true) do |form| %>
-    <div class="py-2">
-      <div class="mb-2">
-        <%= form.text_field :username, placeholder: :username,
-            autocomplete: false, 
-            class:"
-            form-input 
-            w-full 
-            px-2
-            py-1.25
-            rounded-md 
-            shadow-sm 
-            border 
-            border-gray-300 
-            focus:outline-none 
-            focus:border-gray-800 
-            placeholder-gray-400" 
-        %>
-      </div>
+    <h1 class="text-2xl font-bold flex justify-center">Sign Up</h1>
+    <%= form_with(model: @user, url: '/signup', local: true) do |form| %>
+      <div class="py-2">
+        <div class="mb-2">
+          <%= form.text_field :username, placeholder: :username,
+              autocomplete: false, 
+              class:"
+              form-input 
+              w-full 
+              px-2
+              py-1.25
+              rounded-md 
+              shadow-sm 
+              border 
+              border-gray-300 
+              focus:outline-none 
+              focus:border-gray-800 
+              placeholder-gray-400" 
+          %>
+        </div>
 
-      <div class="mb-2">
-        <%= form.email_field :email, 
-            placeholder: :email,
-            autocomplete: false,
-            class:"
-            form-input 
-            w-full 
-            px-2
-            py-1.25
-            rounded-md
-            shadow-sm 
-            border 
-            border-gray-300 
-            focus:outline-none 
-            focus:border-gray-800 
-            placeholder-gray-400" 
-        %>
-      </div>
+        <div class="mb-2">
+          <%= form.email_field :email, 
+              placeholder: :email,
+              autocomplete: false,
+              class:"
+              form-input 
+              w-full 
+              px-2
+              py-1.25
+              rounded-md
+              shadow-sm 
+              border 
+              border-gray-300 
+              focus:outline-none 
+              focus:border-gray-800 
+              placeholder-gray-400" 
+          %>
+        </div>
 
-      <div class="mb-2">
-        <%= form.password_field :password, 
-            placeholder: :password, 
-            autocomplete: false,
-            class:"
-            form-input 
-            w-full 
-            px-2
-            py-1.25
-            rounded-md 
-            shadow-sm 
-            border 
-            border-gray-300 
-            focus:outline-none 
-            focus:border-gray-800 
-            placeholder-gray-400" 
-        %>
-      </div>
+        <div class="mb-2">
+          <%= form.password_field :password, 
+              placeholder: :password, 
+              autocomplete: false,
+              class:"
+              form-input 
+              w-full 
+              px-2
+              py-1.25
+              rounded-md 
+              shadow-sm 
+              border 
+              border-gray-300 
+              focus:outline-none 
+              focus:border-gray-800 
+              placeholder-gray-400" 
+          %>
+        </div>
 
-      <div class="mb-2">
-        <%= form.password_field :password_confirmation, 
-            placeholder: :password_confirmation, 
-            autocomplete: false, 
-            class:"
-            form-input 
-            w-full 
-            px-2
-            py-1.25
-            rounded-md
-            shadow-sm 
-            border 
-            border-gray-300 
-            focus:outline-none 
-            focus:border-gray-800 
-            focus:ring-opacity-50 
-            placeholder-gray-400" 
+        <div class="mb-2">
+          <%= form.password_field :password_confirmation, 
+              placeholder: :password_confirmation, 
+              autocomplete: false, 
+              class:"
+              form-input 
+              w-full 
+              px-2
+              py-1.25
+              rounded-md
+              shadow-sm 
+              border 
+              border-gray-300 
+              focus:outline-none 
+              focus:border-gray-800 
+              focus:ring-opacity-50 
+              placeholder-gray-400" 
+          %>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <%= form.submit 'Sign Up', 
+          class:"
+          text-gray-900
+          hover:text-white
+          border
+          border-gray-800 
+          hover:bg-gray-900 
+          font-medium 
+          rounded-lg 
+          text-sm 
+          px-3 
+          py-1.5
+          text-center 
+          me-1 
+          mb-1
+          "
         %>
       </div>
-    </div>
-    <div class="flex justify-center">
-      <%= form.submit 'Sign Up', 
-        class:"
-        text-gray-900
-        hover:text-white
-        border
-        border-gray-800 
-        hover:bg-gray-900 
-        font-medium 
-        rounded-lg 
-        text-sm 
-        px-3 
-        py-1.5
-        text-center 
-        me-1 
-        mb-1
-        "
-      %>
-    </div>
-  <% end %>
-    <span class="text-xs mb-2 mt-1  flex justify-center">or</span>
-    <%= link_to "Sign In", login_path, class: "text-xs mt-2 flex justify-center hover:underline" %>
+    <% end %>
+      <span class="text-xs mb-2 mt-1  flex justify-center">or</span>
+      <%= link_to "Sign In", login_path, class: "text-xs mt-2 flex justify-center hover:underline" %>
   </div>
 </div>
