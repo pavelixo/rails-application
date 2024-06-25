@@ -10,8 +10,14 @@
     <%# javascript_importmap_tags %>
     <%= javascript_include_tag 'tailwind.3.4.4' %>
     <%= javascript_include_tag 'tailwind.config' %>
-  </head> 
+  </head>
   <body>
-    <%= yield %>
+    <header>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+    </footer>
   </body>
 </html>
