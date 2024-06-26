@@ -1,7 +1,7 @@
 <div class="flex items-center justify-center h-screen">
   <div class="bg-white p-6 rounded-lg shadow-lg">
     <h1 class="text-2xl font-bold flex justify-center">Sign In</h1>
-    <%= form_with(url: '/signin', local: true) do |form| %>
+    <%= form_with(url: login_post_path, local: true) do |form| %>
       <div class="py-2">
         <div class="mb-2">
           <%= form.text_field :username, 
